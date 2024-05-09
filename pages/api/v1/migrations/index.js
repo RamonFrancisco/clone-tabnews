@@ -15,6 +15,8 @@ export default async function migrations(request, response) {
     migrationsTable: "pgmigrations",
   };
 
+  console.log(method);
+
   if (method === "GET") {
     const pendingMigrations = await migrationRunner(migrationRunnerConfigs);
 
